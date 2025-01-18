@@ -1,3 +1,4 @@
+import { getCsrfToken } from '/front/utils/csrfToken.js';
 const signupButton = document.querySelector('.button');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
@@ -39,6 +40,7 @@ emailInput.addEventListener('input', () => {
 passwordInput.addEventListener('input', () => {
     const password = passwordInput.value;
     const passwordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/;
+
     isCollectPassword = passwordRegExp.test(password);
 
     const helper = document.querySelector('#passwordError');
@@ -93,12 +95,10 @@ profileImageInput.addEventListener('change', (event) => {
     const file = event.target.files[0];
 
     if (file) {
-        console.log('Selected file:', file); // 파일 정보 디버깅
         const reader = new FileReader();
 
         // 파일 읽기 완료 후 실행되는 이벤트
         reader.onload = (e) => {
-            console.log('File read result:', e.target.result); // 파일 읽기 결과 디버깅
             profileImgPreview.src = e.target.result; // 이미지 미리보기 표시
         };
 
@@ -108,11 +108,9 @@ profileImageInput.addEventListener('change', (event) => {
 
         reader.readAsDataURL(file); // 파일을 읽어 Data URL 생성
     } else {
-        console.log('No file selected or file selection canceled.'); // 파일 선택 취소 로그
         profileImgPreview.src = '/image/default-profile.png';
     }
 });
-
 
 // 회원가입 버튼 클릭 처리
 signupButton.addEventListener('click', async (event) => {
@@ -134,8 +132,15 @@ signupButton.addEventListener('click', async (event) => {
         }
 
         try {
+            // CSRF 토큰 가져오기
+            const csrfToken = await getCsrfToken();
+
+            // 회원가입 요청
             const response = await fetch('http://localhost:4000/json/users/join', {
                 method: 'POST',
+                headers: {
+                    'CSRF-Token': csrfToken, // CSRF 토큰 추가
+                },
                 body: formData,
                 credentials: 'include',
             });

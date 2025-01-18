@@ -14,14 +14,19 @@ const port = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+
 // 정적 파일 서빙 경로
 const PUBLIC_PATH = path.join(__dirname, 'public');
 const HTML_PATH = path.join(PUBLIC_PATH, 'html');
+
+console.log('Public Path:', PUBLIC_PATH);
 
 // express.static을 통해 정적 파일 서빙
 app.use(express.static(PUBLIC_PATH));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use('/front/utils', express.static(path.join(__dirname, 'utils')));
+
 
 // 초기 접속 -> 로그인 페이지
 app.get('/', (req, res) => {
