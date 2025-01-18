@@ -1,0 +1,16 @@
+{
+    "sequence": 1,
+    "posts": [
+      {
+        "no": 1,
+        "title": "이얏호응",
+        "content": "야옹야옹",
+        "image": "mu.jpeg",
+        "writer": "야통",
+        "regDt": "2024-11-11 11:11:11",
+        "like": 35,
+        "comment": 0,
+        "hit": 157
+      }
+    ]
+}
