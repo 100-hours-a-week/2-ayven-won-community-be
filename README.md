@@ -1,5 +1,7 @@
-🌟 프로젝트 시작 가이드
-📂 파일 구조
+# 🌟 프로젝트 시작 가이드
+
+## 📂 파일 구조
+```
 backend
 ├── controllers/
 │   ├── boardController.js
@@ -16,14 +18,27 @@ backend
 ├── package.json
 ├── server.js
 └── README.md
+```
 
-🚀 시작 방법
-1. Git 클론
+## 🚀 시작 방법
+
+### 1. Git 클론
+```bash
 git clone https://github.com/100-hours-a-week/2-ayven-won-community-be.git
-cd community_ayven/front
-2. 의존성 설치
+cd community_ayven/back
+```
+
+### 2. 의존성 설치
+```bash
 npm install
-3. 실행
+```
+
+### 3. 실행
+```bash
 npm start
-4. 브라우저에서 열기
+```
+
+### 4. 브라우저에서 열기
+```
 http://localhost:4000
+```
