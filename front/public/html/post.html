@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/post.css">
+
+    <a href="/board" class="back-button">
+        &lt; 
+    </a>
+        <h1 class="page-title">아무말 대잔치</h1>
+        <div class="header-right">
+            <img src="/image/person.png" class="user-profile" alt="User Profile">
+            <div class="menu">
+                <div>회원정보수정</div>
+                <div>비밀번호수정</div>
+                <div>로그아웃</div>
+            </div>
+        </div>
+    <hr class="horizontal-rule"/>
+    <title>게시글 상세 페이지</title>
+</head>
+<body>
+    <!-- 상단 제목 및 사용자 프로필 아이콘 -->
+   
+    <hr class="horizontal-rule"/>
+    <section class="post-detail">
+        <!-- 게시글 정보 -->
+        <h2 class="post-title">제목 1</h2>
+        <div class="post-meta">
+            <img src="default-profile.png" alt="작성자 프로필" class="author-profile">
+            <span class="author-name">대체 작성자</span>
+            <span class="post-date">2021-01-01 00:00:00</span>
+        </div>
+
+        <!-- 수정, 삭제 버튼 -->
+        <div class="post-controls">
+            <button class="edit-button" onclick="goToEditPost()">수정</button>
+            <button class="delete-button" onclick="showDeleteModal()">삭제</button>
+        </div>
+
+        <!-- 게시글 사진 및 내용 -->
+        <div class="post-content">
+            <img src="post-image.png" alt="게시글 이미지" class="post-image">
+            <p>여기에 게시글 내용이 들어갑니다...</p>
+        </div>
+
+        <!-- 좋아요, 조회수, 댓글수 -->
+        <div class="post-stats">
+            <div class="stat">123 좋아요</div>
+            <div class="stat" id="view-count">1234 조회수</div>
+            <div class="stat" id="comment-count">56 댓글</div>
+        </div>
+
+        <!-- 댓글 입력 -->
+        <div class="comment-section">
+            <textarea id="comment-text" placeholder="댓글을 남겨주세요!" oninput="toggleCommentButton()"></textarea>
+            <button id="comment-submit" onclick="addComment()" disabled>댓글 등록</button>
+        </div>
+
+        <!-- 댓글 리스트 -->
+        <div class="comment-list" id="comment-list">
+            <!-- 댓글 예시 -->
+            <div class="comment">
+                <span class="comment-author">대체 작성자1</span>
+                <span class="comment-date">2021-01-01 00:00:00</span>
+                <p>댓글 내용</p>
+                <div class="comment-controls">
+                    <button onclick="editComment(this)">수정</button>
+                    <button onclick="showCommentDeleteModal(this)">삭제</button>
+                </div>
+            </div>
+        </div>
+        <script src="/js/menu.js"></script>
+</body>
+</html>

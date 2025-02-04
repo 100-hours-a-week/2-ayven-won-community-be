@@ -1,0 +1,205 @@
+/* 폰트 추가 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
+
+/* 유저 프로필 이미지 스타일 */
+.user-profile {
+  position: relative;
+  left: 900%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* 동그랗게 만들기 */
+  cursor: pointer; /* 클릭 가능하도록 */
+  margin-top: 60px;
+}
+
+/* 메뉴 기본 스타일 */
+.menu {
+  display: none; /* 기본적으로 숨김 */
+  position: absolute;
+  top: 60px; /* 헤더 아래 위치 */
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* 메뉴 아이템 스타일 */
+.menu div {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 메뉴 아이템 hover 효과 */
+.menu div:hover {
+  background-color: #f1f1f1;
+}
+/* 페이지 설정 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 중앙에 맞춰 더 아래로 위치 */
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f8f8f8;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.8rem;
+}
+.greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px; /* 더 아래로 이동 */
+}
+
+/* 페이지 제목 */
+.page-title {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+  font-family: "Do Hyeon", sans-serif !important;
+  font-weight: 100;
+  text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.5);
+}
+
+/* 가로줄 구분선 */
+.horizontal-rule {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: #000000;
+  margin: 130px auto 50px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* 중앙에 맞춰 간격 조절 */
+  margin-top: 500px; 
+}
+
+/* 제목 스타일 */
+.greeting h2 {
+  font-size: 1.0rem;
+  color: #333;
+  margin-top: 100px; 
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* '게시판' 부분만 굵게 표시 */
+.bold-text {
+  font-weight: bold;
+}
+
+/* 게시글 작성 버튼 */
+.create-button {
+  color: #fff;
+  background-color: #aca0eb;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  margin-top: 80px;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  right: 90px; /* 오른쪽 끝에 맞추기 */
+  top: 150px; /* 게시글 박스와 맞춤 */
+}
+
+/* 마우스 호버 시 색상 변경 */
+.create-button:hover {
+  background-color: #7f6aee;
+}
+
+/* 게시글 박스 스타일 */
+.post-box {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 10px 0;
+  width: 200%;
+  max-width: 600px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-left: -50%; /* 중앙 정렬 */
+}
+
+.post-box:hover {
+  transform: scale(1.02); /* 게시글 박스 호버시 커짐 */
+}
+
+.post-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 500px; 
+}
+
+.post-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0; /* 수평선 추가 */
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.post-info {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: right; /* 날짜 오른쪽 정렬 */
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.author-profile {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author-nickname {
+  font-weight: bold;
+}
+/* 게시글 박스 내 세로 구분선 */
+.vertical-divider {
+  border: none;
+  border-left: 1px solid #ccc;
+  height: 200%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 300%;
+}

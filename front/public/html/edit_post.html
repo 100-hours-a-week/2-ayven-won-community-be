@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 수정</title>
+    <link rel="stylesheet" href="/css/edit_post.css"/>
+</head>
+<body>
+    <header class="header">
+        <a class="back-button" href="/board">&lt;</a>
+        <h1 class="page-title">아무 말 대잔치</h1>
+        <div class="header-right">
+            <img src="/image/person.png" class="user-profile" alt="User Profile">
+            <div class="menu">
+                <div>회원정보수정</div>
+                <div>비밀번호수정</div>
+                <div>로그아웃</div>
+            </div>
+        </div>
+        <hr class="horizontal-rule"/>  
+    </header>
+
+    <main>
+        <h2 class="sub-title">게시글 수정</h2>
+        <form id="edit-post-form">
+            <label for="title">제목*</label>
+            <input type="text" id="title" name="title" maxlength="26" placeholder="제목 1" required>
+
+            <label for="content">내용*</label>
+            <textarea id="content" name="content" rows="10" placeholder="내용을 입력하세요." required></textarea>
+            <p class="helper-text">* helper text</p>
+                 
+            <label for="image">이미지</label>
+            <input type="file" id="image" name="image" accept="image/*" />
+
+           
+
+            <button type="submit" class="submit-button">수정하기</button>
+        </form>
+    </main>
+    <script src="/js/menu.js"></script>
+</body>
+</html>

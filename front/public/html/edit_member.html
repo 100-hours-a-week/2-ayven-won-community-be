@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/edit_member.css"/>
+    <title>회원 정보 수정</title>
+</head>
+<body>
+    
+    <h1 class="page-title">아무말 대잔치</h1>
+    <div class="header-right">
+        <img src="/image/person.png" class="user-profile" alt="User Profile">
+        <div class="menu">
+            <div>회원정보수정</div>
+            <div>비밀번호수정</div>
+            <div>로그아웃</div>
+        </div>
+    </div>
+
+    <hr class="horizontal-rule"/>
+
+    <section class="profile">
+        <h2 class="bold">회원정보수정</h2>
+        <article class="photo">
+            <div class="photo-label">
+                <h3 class="bold">프로필 사진*</h3>
+            </div>
+            <img src="" class="image"/>
+            <div class="change">
+                <label for="file">
+                    변경
+                    <input type="file" name="file" id="file" accept=".jpg, .jpeg, .png">
+                </label>
+            </div>
+        </article>
+        <form action="" method="post" class="edit-form">
+            <div class="email">
+                <p class="bold">이메일</p>
+                <p></p> <!-- 이메일이 표시되는 영역 -->
+            </div>
+            <div class="profile-info">
+                <label for="nickname" class="bold">닉네임</label>
+                <input
+                        type="text"
+                        id="nickname"
+                        name="nickname"
+                        value=""
+                        placeholder="닉네임을 입력하세요"/>
+                <p class="helper"></p>
+            </div>
+            <button type="button" class="button bold">수정하기</button>
+            <a href="" class="quit">회원 탈퇴</a>
+        </form>
+        <button class="confirm-button">수정완료</button>
+    </section>
+    
+    <script src="/js/menu.js"></script>
+</body>
+</html>

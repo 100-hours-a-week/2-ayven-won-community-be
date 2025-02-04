@@ -1,0 +1,221 @@
+/* 폰트 추가 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
+
+/* 유저 프로필 이미지 스타일 */
+.user-profile {
+  position: relative;
+  left: 900%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* 동그랗게 만들기 */
+  cursor: pointer; /* 클릭 가능하도록 */
+  margin-top: 10px;
+}
+/* 메뉴 오른쪽 고정 */
+.header-right {
+  position: fixed !important; /* 우선순위를 강제 */
+  top: 10px !important; 
+  display: flex; /* 내부 요소 수평 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+
+/* 메뉴 기본 스타일 */
+.menu {
+  display: none; /* 기본적으로 숨김 */
+  position: absolute;
+  top: 50px; /* 헤더 바로 아래 위치 */
+  right: -400px; /* 헤더 오른쪽에 맞춤 */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* 메뉴 아이템 스타일 */
+.menu div {
+  padding: 10px 15px; /* 메뉴 아이템 여백 조정 */
+  cursor: pointer; /* 클릭 가능하도록 */
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+/* 메뉴 아이템 hover 효과 */
+.menu div:hover {
+  background-color: #f1f1f1;
+}
+
+/* 페이지 설정 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 100;
+  background-color: #f8f8f8;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.8rem;
+}
+
+
+.profile-icon {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profile-menu {
+    display: none; /* 기본으로 숨김 */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 150px;
+}
+
+.profile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-menu li {
+    padding: 10px;
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+    color: #333;
+}
+
+.profile-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.profile-section:hover .profile-menu {
+    display: block; /* 아이콘에 마우스 올릴 때 메뉴 표시 */
+}
+
+.page-title {
+  position: fixed;/* 페이지 최상단 고정 */
+  top: 0; /* 상단 위치 설정 */
+  text-align: center; /* 중앙 정렬 */
+  font-size: 2.5rem; /* 글자 크기 */
+  font-weight: bold; /* 글자 두께 */
+  color: #333; /* 글자 색상 */
+  padding: 10px; /* 내부 여백 */
+  font-family: "Do Hyeon", sans-serif !important; /* 글씨체 변경 */
+  font-weight: 100;
+  font-style: normal;  
+  text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.5); /* 텍스트를 더 얇게 보이게 하는 효과 */
+  
+}
+  /* 가로줄 구분선 */
+.horizontal-rule {
+    position: fixed;/* 페이지 최상단 고정 */
+    top: 0; /* 상단 위치 설정 */
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #000000;
+    margin: 130px auto 50px; /* 위쪽, 아래쪽 여백 설정 */
+  }
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+/* 회원 정보 수정 제목 */
+h2.bold {
+  text-align: center; /* 중앙 정렬 */
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 100px;
+  margin-bottom: 20px; /* 제목과 다른 요소 사이의 간격 */
+}
+
+.h3 {
+  font-size: 5.5rem!important;
+  color: #333;
+  margin: 100px 100 100px 0;
+  text-align: center;
+}
+.bold-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+.helper-text {
+    color: red; /* 빨간색으로 변경 */
+  }
+
+
+/* 버튼 스타일 */
+
+button {
+  display: block;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 100px auto 10px;
+  background-color: #6B21A8; /* 보라색 */
+  color: #fff;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.comment {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+
+/* 회원 탈퇴 버튼 */
+.quit {
+  text-align: center;
+  margin-top: 10px;
+  color: #000000; /* 글씨색 검정 */
+  background-color: transparent; /* 배경색 투명 */
+  padding: 10px 20px; /* 여백 조정 */
+  border-radius: 4px; /* 모서리 둥글게 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-size: 0.8rem; /* 글씨 크기 */
+}
+
+.confirm-button {
+  background-color: #d0b3ff;
+  color: #ffffff;;
+}

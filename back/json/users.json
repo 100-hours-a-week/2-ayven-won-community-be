@@ -1,0 +1,35 @@
+{
+    "sequence": 4,
+    "users": [
+      {
+        "id": 0,
+        "email": "qwe0@gmail.com",
+        "password": "qweQWE123!",
+        "nickname": "무",
+        "image": "mu.jpeg"
+      },
+      {
+        "id": 1,
+        "email": "qwe1@gmail.com",
+        "password": "qweQWE123!",
+        "nickname": "야통",
+        "image": "yahong.jpeg"
+      },
+      {
+        "id": 2,
+        "email": "qwe2@gmail.com",
+        "password": "qweQWE123!",
+        "nickname": "길막",
+        "image": "gilmak.jpeg"
+      },
+      {
+        "id": 3,
+        "email": "qwe3@gmail.com",
+        "password": "qweQWE123!",
+        "nickname": "삼색",
+        "image": "samsack.jpeg"
+      }
+      
+    ]
+  }
+  
