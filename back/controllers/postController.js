@@ -1,6 +1,6 @@
-import postModel from "../models/jsonPostModel.js";
-import memberModel from "../models/jsonUserModel.js";
-import commentModel from "../models/jsonCommentModel.js";
+import postModel from "../models/postModel.js";
+import memberModel from "../models/userModel.js";
+import commentModel from "../models/commentModel.js";
 
 const methods = {
     async addPost(req, res) {

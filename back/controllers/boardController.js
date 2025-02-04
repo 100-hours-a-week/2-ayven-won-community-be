@@ -1,4 +1,4 @@
-import postModel from "../models/jsonPostModel.js";
+import postModel from "../models/postModel.js";
 
 const methods = {
     async showBoard(req, res) {
